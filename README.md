@@ -5,7 +5,7 @@ Create a folder on the computer that you want to control, mkdir in /etc/hadpms
  	IP address and username & password for mqtt are required
 
 git the hadpms.service script into /etc/systemd/system, enable script as a service on Debian.
- it will just run continously in the background.
+ edit the file and change to your logged in username and save it. it will just run continously in the background.
  
  MQTT commands are received and controls the screen blanking feature of DPMS service on Debian OS
 
