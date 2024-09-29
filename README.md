@@ -1,3 +1,7 @@
+Create a folder on the computer that you want to control, mkdir in /etc/hadpms
+git this file into that directory and then edit the file with your local homeassistant info
+IP address and username & password for mqtt are required
+
 Run this python script as a service on Debian.
  
  MQTT commands are received and controls the screen blanking feature of DPMS service
