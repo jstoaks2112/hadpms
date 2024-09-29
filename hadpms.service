@@ -1,0 +1,12 @@
+[Unit]
+Description=Display Switch Service
+After=network.target
+
+[Service]
+Environment=export DISPLAY=:0
+ExecStart=/usr/bin/python3 /etc/ha/hadpms.py
+Restart=always
+User=john
+
+[Install]
+WantedBy=multi-user.target
