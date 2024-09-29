@@ -1,10 +1,13 @@
-Create a folder on the computer that you want to control, mkdir in /etc/hadpms
-git this file into that directory and then edit the file with your local homeassistant info
-IP address and username & password for mqtt are required
-
-Run this python script as a service on Debian.
+These scripts allow for lcd or monitor output blanking controls featured in the DPMS service of Debian OS.
  
- MQTT commands are received and controls the screen blanking feature of DPMS service
+Create a folder on the computer that you want to control, mkdir in /etc/hadpms
+ git this file into that directory and then edit the file with your local homeassistant info.
+ 	IP address and username & password for mqtt are required
+
+git the hadpms.service script into /etc/systemd/system, enable script as a service on Debian.
+ it will just run continously in the background.
+ 
+ MQTT commands are received and controls the screen blanking feature of DPMS service on Debian OS
 
 	# Example configuration.yaml entry
 	#mqtt:
@@ -37,3 +40,15 @@ Template interfaces are created in Homeassistant for manual/automated control
 
 
 Example use case to Blank Monitors when room light switch is shut off or turned on
+
+  Automation YAML for Homessistant example
+
+ 	target:
+   	entity_id: switch.lcd_display
+   	action: switch.turn_on
+    
+    Same for turning off
+
+ 	target:
+  	entity_id: switch.vaio_display
+	action: switch.turn_on
