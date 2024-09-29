@@ -2,11 +2,11 @@ import paho.mqtt.client as mqtt
 import subprocess
 
 # MQTT Settings
-mqtt_broker = "ha.stoaks.net"
+mqtt_broker = "homeassistant server ip"
 mqtt_port = 1883
 mqtt_topic = "/homeassistant/sensor/vaio/lcd"
-mqtt_username = "john"
-mqtt_password = "tool2112"
+mqtt_username = "user"
+mqtt_password = "password"
 
 # Define callback functions
 def on_connect(client, userdata, flags, rc):
