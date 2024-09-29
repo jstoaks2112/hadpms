@@ -4,7 +4,7 @@ import subprocess
 # MQTT Settings
 mqtt_broker = "homeassistant server ip"
 mqtt_port = 1883
-mqtt_topic = "/homeassistant/sensor/vaio/lcd"
+mqtt_topic = "/homeassistant/sensor/dpms/lcd"
 mqtt_username = "user"
 mqtt_password = "password"
 
